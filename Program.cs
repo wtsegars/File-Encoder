@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Text;
+using static System.Environment;
 using static System.Console;
+using static System.IO.Path;
 
 namespace File_Encoder
 {
@@ -20,6 +22,9 @@ namespace File_Encoder
             ConsoleKey number = ReadKey(false).Key;
             WriteLine();
             WriteLine();
+
+            Write("Please enter the file path relative to the location of this file (if the file exists within the same directory as Program.cs, then just enter the name of the file):");
+            string textPath = ReadLine();
 
             Encoding encoder;
             switch (number)
@@ -43,6 +48,8 @@ namespace File_Encoder
                     encoder = Encoding.Default;
                     break;
             }
+
+            string textFile = Combine(textPath, "convert.txt");
         }
     }
 }
