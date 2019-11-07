@@ -19,6 +19,9 @@ namespace File_Encoder
             WriteLine(" [5] UTF-32");
             WriteLine(" [any other key] Defaults");
 
+            WriteLine("Write the path to the the file relative to the Program.cs:");
+            string filePath = ReadLine();
+
             Write("Press a number to choose an encoding: ");
             ConsoleKey number = ReadKey(false).Key;
             WriteLine();
@@ -47,15 +50,12 @@ namespace File_Encoder
                     break;
             }
 
-            StreamReader textFile = new StreamReader(@"test.txt");
+            string[] lines = File.ReadAllLines(filePath, encoder);
 
-            StreamWriter textWrite = new StreamWriter(@"test.txt");
-
-            byte[] encoded = encoder.GetBytes(@"test.txt");
-
-            WriteLine($"{encoder.GetType().Name} uses {encoded.Length} bytes.");
-
-            WriteLine(textWrite);
+            foreach (string line in lines)
+            {
+                WriteLine(line);
+            }
         }
     }
 }
