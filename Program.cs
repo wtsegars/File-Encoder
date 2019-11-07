@@ -50,6 +50,19 @@ namespace File_Encoder
             }
 
             string textFile = Combine(textPath, "convert.txt");
+
+            byte[] encoded = encoder.GetBytes(textFile);
+
+            WriteLine($"{encoder.GetType().Name} uses {encoded.Length}.");
+
+            WriteLine($"Byte  Hex  Char");
+            foreach (byte b in encoded)
+            {
+                WriteLine($"{b,4} {b.ToString("X"),4} {(char)b,5}");
+            }
+
+            string decoded = encoder.GetString(encoded);
+            WriteLine(decoded);
         }
     }
 }
