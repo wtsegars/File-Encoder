@@ -52,9 +52,12 @@ namespace File_Encoder
 
             string[] lines = File.ReadAllLines(filePath, encoder);
 
+            string convertPath = @"ConvertText\convert.txt";
+
             foreach (string line in lines)
             {
                 WriteLine(line);
+                File.WriteAllLines(convertPath, lines, encoder);
             }
         }
     }
