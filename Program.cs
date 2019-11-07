@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Text;
+using System.IO;
+using static System.Environment;
 using static System.Console;
 using static System.IO.Path;
 
@@ -21,9 +23,6 @@ namespace File_Encoder
             ConsoleKey number = ReadKey(false).Key;
             WriteLine();
             WriteLine();
-
-            Write("Please enter the file path relative to the location of this file (if the file exists within the same directory as Program.cs, then just enter the name of the file):");
-            string textPath = ReadLine();
 
             Encoding encoder;
             switch (number)
@@ -48,20 +47,15 @@ namespace File_Encoder
                     break;
             }
 
-            string textFile = Combine(textPath, "convert.txt");
+            StreamReader textFile = new StreamReader(@"test.txt");
 
-            byte[] encoded = encoder.GetBytes(textFile);
+            StreamWriter textWrite = new StreamWriter(@"test.txt");
 
-            WriteLine($"{encoder.GetType().Name} uses {encoded.Length}.");
+            byte[] encoded = encoder.GetBytes(@"test.txt");
 
-            WriteLine($"Byte  Hex  Char");
-            foreach (byte b in encoded)
-            {
-                WriteLine($"{b,4} {b.ToString("X"),4} {(char)b,5}");
-            }
+            WriteLine($"{encoder.GetType().Name} uses {encoded.Length} bytes.");
 
-            string decoded = encoder.GetString(encoded);
-            WriteLine(decoded);
+            WriteLine(textWrite);
         }
     }
 }
