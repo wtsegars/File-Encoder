@@ -15,6 +15,34 @@ namespace File_Encoder
             WriteLine(" [4] UTF-16 (Unicode)");
             WriteLine(" [5] UTF-32");
             WriteLine(" [any other key] Defaults");
+
+            Write("Press a number to choose an encoding: ");
+            ConsoleKey number = ReadKey(false).Key;
+            WriteLine();
+            WriteLine();
+
+            Encoding encoder;
+            switch (number)
+            {
+                case ConsoleKey.D1:
+                    encoder = Encoding.ASCII;
+                    break;
+                case ConsoleKey.D2:
+                    encoder = Encoding.UTF7;
+                    break;
+                case ConsoleKey.D3:
+                    encoder = Encoding.UTF8;
+                    break;
+                case ConsoleKey.D4:
+                    encoder = Encoding.Unicode;
+                    break;
+                case ConsoleKey.D5:
+                    encoder = Encoding.UTF32;
+                    break;
+                default:
+                    encoder = Encoding.Default;
+                    break;
+            }
         }
     }
 }
