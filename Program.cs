@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Text;
-using static System.Environment;
 using static System.Console;
 using static System.IO.Path;
 
