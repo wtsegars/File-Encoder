@@ -52,7 +52,7 @@ namespace File_Encoder
 
             string[] lines = File.ReadAllLines(filePath, encoder);
 
-            string convertPath = @"ConvertText\convert.txt";
+            string convertPath = @"ConvertedText\convert.txt";
 
             foreach (string line in lines)
             {
