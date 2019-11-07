@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Text;
+using static System.Console;
 
 namespace File_Encoder
 {
@@ -6,7 +8,13 @@ namespace File_Encoder
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            WriteLine("Encodings:");
+            WriteLine(" [1] ASCII");
+            WriteLine(" [2] UTF-7");
+            WriteLine(" [3] UTF-8");
+            WriteLine(" [4] UTF-16 (Unicode)");
+            WriteLine(" [5] UTF-32");
+            WriteLine(" [any other key] Defaults");
         }
     }
 }
