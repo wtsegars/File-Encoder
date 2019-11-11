@@ -52,7 +52,7 @@ namespace File_Encoder
 
             byte[] encodedText = encoder.GetBytes(textToConvert);
 
-            string textFile = Combine("/ConvertedText", "convert.txt");
+            string textFile = Combine("/ConvertedText/", "convert.txt");
 
             StreamWriter text = File.CreateText(textFile);
 
