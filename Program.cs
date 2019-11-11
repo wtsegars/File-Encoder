@@ -47,7 +47,16 @@ namespace File_Encoder
                     break;
             }
 
-            
+            Write("Enter the text that you would like to encode: ");
+            string textToConvert = ReadLine();
+
+            byte[] encodedText = encoder.GetBytes(textToConvert);
+
+            string textFile = Combine("/ConvertedText", "convert.txt");
+
+            StreamWriter text = File.CreateText(textFile);
+
+            WriteLine(text);
         }
     }
 }
