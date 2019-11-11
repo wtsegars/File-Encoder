@@ -50,15 +50,7 @@ namespace File_Encoder
                     break;
             }
 
-            string[] lines = File.ReadAllLines(filePath, encoder);
-
-            string convertPath = @"ConvertedText\convert.txt";
-
-            foreach (string line in lines)
-            {
-                WriteLine(line);
-                File.WriteAllLines(convertPath, lines, encoder);
-            }
+            
         }
     }
 }
