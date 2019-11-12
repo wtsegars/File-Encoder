@@ -50,13 +50,7 @@ namespace File_Encoder
             Write("Enter the text that you would like to encode: ");
             string textToConvert = ReadLine();
 
-            byte[] encodedText = encoder.GetBytes(textToConvert);
-
-            string textFile = Combine(CurrentDirectory, "ConvertedText/convert.txt");
-
-            StreamWriter text = File.CreateText(textFile);
-
-            WriteLine(text);
+            WriteLine(textToConvert);
         }
     }
 }
