@@ -1,0 +1,11 @@
+/Users/steelwind/bc/File-Encoder/bin/Debug/netcoreapp3.0/File-Encoder
+/Users/steelwind/bc/File-Encoder/bin/Debug/netcoreapp3.0/File-Encoder.deps.json
+/Users/steelwind/bc/File-Encoder/bin/Debug/netcoreapp3.0/File-Encoder.runtimeconfig.json
+/Users/steelwind/bc/File-Encoder/bin/Debug/netcoreapp3.0/File-Encoder.runtimeconfig.dev.json
+/Users/steelwind/bc/File-Encoder/bin/Debug/netcoreapp3.0/File-Encoder.dll
+/Users/steelwind/bc/File-Encoder/bin/Debug/netcoreapp3.0/File-Encoder.pdb
+/Users/steelwind/bc/File-Encoder/obj/Debug/netcoreapp3.0/File-Encoder.csprojAssemblyReference.cache
+/Users/steelwind/bc/File-Encoder/obj/Debug/netcoreapp3.0/File-Encoder.AssemblyInfoInputs.cache
+/Users/steelwind/bc/File-Encoder/obj/Debug/netcoreapp3.0/File-Encoder.AssemblyInfo.cs
+/Users/steelwind/bc/File-Encoder/obj/Debug/netcoreapp3.0/File-Encoder.dll
+/Users/steelwind/bc/File-Encoder/obj/Debug/netcoreapp3.0/File-Encoder.pdb
