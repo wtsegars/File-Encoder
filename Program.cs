@@ -50,7 +50,12 @@ namespace File_Encoder
             Write("Enter the text that you would like to encode: ");
             string textToConvert = ReadLine();
 
-            WriteLine(textToConvert);
+            byte[] encoded = encoder.GetBytes(textToConvert);
+
+            foreach (byte b in encoded)
+            {
+                WriteLine(b);
+            }
         }
     }
 }
