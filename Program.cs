@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Text;
 using System.IO;
-using static System.Environment;
 using static System.Console;
-using static System.IO.Path;
 
 namespace File_Encoder
 {
