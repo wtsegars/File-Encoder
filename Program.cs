@@ -52,10 +52,17 @@ namespace File_Encoder
 
             byte[] encoded = encoder.GetBytes(textToConvert);
 
+            string textFile = "ConvertedText/convert.txt";
+
+            StreamWriter text = File.CreateText(textFile);
+
             foreach (byte b in encoded)
             {
-                WriteLine(b);
+                text.WriteLine(b);
             }
+            text.Close();
+
+            WriteLine(File.ReadAllText(textFile));
         }
     }
 }
